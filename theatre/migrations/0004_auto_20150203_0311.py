@@ -2,9 +2,8 @@
 from __future__ import unicode_literals
 import random
 
-from django.db import migrations
-
-from theatre_project.models import Movie
+from django.db import models, migrations
+from theatre.models import Movie
 
 
 def add_showtimes(app, schema_editor):
