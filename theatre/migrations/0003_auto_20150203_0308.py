@@ -11,12 +11,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='movie',
-            name='showtimes',
-            field=models.TextField(null=True),
-            preserve_default=True,
-        ),
         migrations.AlterField(
             model_name='actor',
             name='bio',

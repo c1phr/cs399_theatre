@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import datetime
 
 from django.db import models, migrations
-from theatre.models import Movie, Actor
+from theatre.models import Show, Actor
 
 
 def add_movies(app, schema_editor):
@@ -20,13 +21,13 @@ def add_movies(app, schema_editor):
     malcolm_in_the_middle.save()
 
     # Create some initial movies
-    mission_improb = Movie(movie_title="Mission Improbable", running_time=120)
+    mission_improb = Show(show_title="Mission Improbable", event_date=datetime.datetime(2015, 3, 1, 17, 0))
     mission_improb.save()
     # Many to many relationships can't be established until the records are both individually saved, so Django's ORM
     # can look up the ID of both objects for the relation table
     mission_improb.main_actors.add(tim_cruise)
 
-    robots = Movie(movie_title="Robots in Disguise", running_time=90)
+    robots = Show(show_title="Robots in Disguise", event_date=datetime.datetime(2015, 2, 15, 15, 0))
     robots.save()
     robots.main_actors.add(malcolm_in_the_middle)
 

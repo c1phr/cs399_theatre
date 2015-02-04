@@ -23,11 +23,11 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='Movie',
+            name='Show',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
-                ('movie_title', models.CharField(max_length=100)),
-                ('running_time', models.IntegerField()),
+                ('show_title', models.CharField(max_length=100)),
+                ('event_date', models.DateTimeField()),
                 ('main_actors', models.ManyToManyField(to='theatre.Actor')),
             ],
             options={
