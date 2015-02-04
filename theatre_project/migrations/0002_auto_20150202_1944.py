@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models, migrations
-from theatre.models import Movie, Actor
+from django.db import migrations
+
+from theatre_project.models import Movie, Actor
 
 
 def add_movies(app, schema_editor):
