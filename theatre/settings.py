@@ -1,5 +1,5 @@
 """
-Django settings for theatre_project project.
+Django settings for theatre project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'theatre',
-    'theatre_project',
 
 )
 
@@ -52,9 +51,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'theatre_project.urls'
+ROOT_URLCONF = 'theatre.urls'
 
-WSGI_APPLICATION = 'theatre_project.wsgi.application'
+WSGI_APPLICATION = 'theatre.wsgi.application'
 
 
 # Database
@@ -94,6 +93,6 @@ STATICFILES_DIRS = (
 #Template location
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(BASE_DIR),"theatre_project", "templates"),
+    os.path.join(os.path.dirname(BASE_DIR),"theatre", "templates"),
                   )
 
