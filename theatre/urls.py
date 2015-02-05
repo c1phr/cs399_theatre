@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     url(r'^merchandise/', views.merchandise, name='merchandise'),
     url(r'^performances/', views.performances, name='performances'),
     url(r'^ticket_sales/', views.ticket_sales, name='ticket_sales'),
+    url(r'^bio/', views.bio, name='bio'),
     url(r'^admin/', include(admin.site.urls)),
 )  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
