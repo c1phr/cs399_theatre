@@ -25,3 +25,8 @@ class Seats(models.Model):
 	# Currency field to hold the price of the seat in a given section
 	seat_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
 	
+#Model To describe each movie
+class Information(models.Model):
+        performance_information = models.CharField(max_length=1000)	
+
+	

@@ -7,7 +7,8 @@ def home(request):
 	return render(request, 'index.html', {})
 
 def information_performance(request):
-	return render(request, 'information_performance.html', {})
+	return render(request, 'information_performance.html', {'performances' : Show.objects.all(),
+												 'actors' : Actor.objects.all()})
 
 def merchandise(request):
 	return render(request, 'merchandise.html', {})
