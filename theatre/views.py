@@ -16,10 +16,9 @@ def performances(request):
 	return render(request, 'performances.html', {'performances' : Show.objects.all(),
 												 'actors' : Actor.objects.all()})
 
-
 def ticket_sales(request):
-	return render(request, 'ticket_sales.html', {})
-
+	return render(request, 'ticket_sales.html', {'performances' : Show.objects.all(),
+												 'actors' : Actor.objects.all()})
 def bio(request):
 	actor_id = request.GET.get('id', None)
 	if not actor_id:

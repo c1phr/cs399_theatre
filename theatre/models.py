@@ -15,3 +15,13 @@ class Show(models.Model):
     event_date = models.DateTimeField()
     # Many to many relationship with actors, since we could add actor records for multiple actors in a movie
     main_actors = models.ManyToManyField(Actor)
+	
+# Model to store the Theatre Seat objects
+class Seats(models.Model):
+	# CharField to represent the letter of the section of seating in the theatre
+	seat_section = models.CharField(max_length=10)	
+	# Numeric field for the seat number within a section
+	seat_number = models.IntegerField(max_length=3)	
+	# Currency field to hold the price of the seat in a given section
+	seat_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
+	
