@@ -15,33 +15,38 @@
 {% block content %}
 
 <h1>Performance Information</h1>
-	<div class="container">
-           
-            {% for performance in performances %}
-                            <p style="float: right; padding-right:25px;"><img src="img.jpg" height="200px" width="200px"  border="10px"></p>
-                            <p>lesuada magna mollis euismod. Donec sed odio dui. lesuada magna mollis euismod. Donec sed odio dui.lesuada magna mollis euismod. Donec sed odio dui.lesuada magna mollis euismod. Donec sed odio dui.</p>
 
-                            <p>{{ performance.event_date }}</p>
-                            <p>{{ performance.show_title }}</p>
+                    <hr>
 
-                            {% for actors in performance.main_actors.all %}
-                                    <td><a href="/bio?id={{ actors.id }}">{{ actors.first_name }} {{ actors.last_name }}</a></td>
-                            {% endfor %}
-                            
-                                {% for information in performance.main_information.all %}
-                                            {% endfor %}
+                        <!--Image From http://www.hermonchurch.org/mission-improbable/-->
+                    <p style="float: right; padding-right:25px;"><img src="/static/images/mission_improbable.jpg" height="200px" width="200px"  border="10px"></p>
+                    
+                    <h3>Show: Mission Improbable</h3>
+                    <p>Date: March 1, 2015, 5 p.m</p>
+                    <p>Starring: Tim Cruise</p>
+                    <p>Enjoy the BEST live comdey this year with the live play of Mission Improbable. Experience LIVE how An American
+                    agent, under false suspicion of disloyalty, must prove to the world he is innocent in a comedic way you have never experienced before.</p>
+                    
+                    <hr>
 
-                            <hr>
-                    </tr>
-            {% endfor %}
 
-	</div>
-    
-        <hr>
-                    <h1><center>CONTACT INFO</center></h1>
-                    <p><center>2081 W. Highway 89A</center></p>
-                    <p><center>Sedona, AZ  86336</center></p>
-                    <p><center>928-282-2221</center></p>
-                    <p><center>(Hwy 89A & Sunset Dr.)</center></p>
-        
-        {% endblock %}
+                        <!--Image From http://www.clipartpanda.com/categories/family-clipart-5-people-->
+
+                    <p style="float: right; padding-right:25px;"><img src="/static/images/robots.jpg" height="200px" width="200px"  border="10px"></p>
+                    
+                    <h3>Show: Robots in Disguise</h3>
+                    <p>Date: Feb 15, 2015, 3 p.m</p>
+                    <p>Starring: Malcolm In The Middle</p>
+                    <p>One of the Darkest Dramas of the Year. Experience how Malcolm a very young teen
+                    turns his life around and is able to survive with his dysfuntional family that in reality are ROBOTS in DISGUISE</p>
+                    
+                    <hr>
+                        
+            <h1><center>CONTACT INFO</center></h1>
+            <p><center>2081 W. Highway 89A</center></p>
+            <p><center>Sedona, AZ  86336</center></p>
+            <p><center>928-282-2221</center></p>
+            <p><center>(Hwy 89A & Sunset Dr.)</center></p>
+
+{% endblock %}
+
