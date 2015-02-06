@@ -20,7 +20,7 @@ def performances(request):
 def ticket_sales(request):
 	return render(request, 'ticket_sales.html', {'performances' : Show.objects.all(),
 												 'actors' : Actor.objects.all(),
-												 'ticket_sales' : Seats.objects.all()})
+												 'ticket_sales' : Seat.objects.all()})
 												 
 def bio(request):
 	actor_id = request.GET.get('id', None)

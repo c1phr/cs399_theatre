@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='show',
             name='available_seats',
-            field=models.IntegerField(max_length=3, default=()),
+            field=models.IntegerField(max_length=3, default=(100)),
             preserve_default=False,
         ),
     ]
