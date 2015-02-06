@@ -17,13 +17,13 @@ class Show(models.Model):
     main_actors = models.ManyToManyField(Actor)
 	
 # Model to store the Theatre Seat objects
-class Seats(models.Model):
-	# CharField to represent the letter of the section of seating in the theatre
-	seat_section = models.CharField(max_length=10)	
-	# Numeric field for the seat number within a section
+class Seats(models.Model):	
+	# Numeric field for the number of available seats for a given show
 	seat_number = models.IntegerField(max_length=3)	
 	# Currency field to hold the price of the seat in a given section
 	seat_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
+	# Currency field to hold the value of the discount if person purchasing the ticket is a Student/Military
+	seat_discount = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
 	
 #Model To describe each movie
 class Information(models.Model):

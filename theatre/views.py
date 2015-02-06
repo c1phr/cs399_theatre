@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from theatre.models import Show, Actor
+from theatre.models import Show, Actor, Seats
 
 
 def home(request):
@@ -19,7 +19,9 @@ def performances(request):
 
 def ticket_sales(request):
 	return render(request, 'ticket_sales.html', {'performances' : Show.objects.all(),
-												 'actors' : Actor.objects.all()})
+												 'actors' : Actor.objects.all(),
+												 'ticket_sales' : Seats.objects.all()})
+												 
 def bio(request):
 	actor_id = request.GET.get('id', None)
 	if not actor_id:
